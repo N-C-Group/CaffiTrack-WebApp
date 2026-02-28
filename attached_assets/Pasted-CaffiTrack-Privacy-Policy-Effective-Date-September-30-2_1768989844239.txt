@@ -1,0 +1,133 @@
+CaffiTrack Privacy Policy
+
+Effective Date: September 30, 2025
+
+This Privacy Policy applies to the CaffiTrack mobile application (the “Application”), developed by Ismail (the “Service Provider”) and provided as a Freemium service. The Application is provided “AS IS.”
+
+CaffiTrack is a caffeine intake tracking app designed to help users log, monitor, and better understand their caffeine consumption.
+
+Information Collection and Use
+
+The Application collects limited, automatically generated information to ensure proper functionality and improve performance. This may include:
+
+Device Internet Protocol (IP) address
+
+App usage information (such as screens visited, session duration, and interaction events)
+
+Crash reports and performance diagnostics
+
+Device operating system and version
+
+The Application does not collect precise location data.
+
+This information is used solely for:
+
+App functionality
+
+Performance monitoring
+
+Analytics and crash reporting
+
+Caffeine Intake Data (On-Device Only)
+
+All caffeine intake data entered into the Application is stored locally on the user’s device.
+
+The Service Provider does not collect, upload, store, or access caffeine intake data
+
+Caffeine intake data is not transmitted to external servers
+
+Data is not linked to any personal identity
+
+Users may delete their data at any time by clearing the app’s data or uninstalling the Application.
+
+AI Assistant
+
+The Application includes an AI-powered assistant that helps users gain insights about their caffeine intake.
+
+The AI assistant analyzes only data stored locally on the user’s device
+
+User data is not stored, logged, or retained by the Service Provider
+
+AI responses are generated for informational purposes only
+
+The AI assistant does not create user profiles and does not store personal or health data.
+
+Import and Export Features
+
+The Application allows users to import and export their caffeine intake data.
+
+These actions are user-initiated
+
+Data is handled locally on the device
+
+Imported or exported data is not transmitted to the Service Provider
+
+Personally Identifiable Information
+
+The Application:
+
+Does not require account creation
+
+Does not collect names, email addresses, user IDs, or other personal identifiers
+
+Third-Party Services
+
+The Application uses third-party services to support analytics, crash reporting, and in-app purchases. These services may collect limited technical data under their own Privacy Policies:
+
+Google Play Services
+
+Google Analytics for Firebase
+
+Firebase Crashlytics
+
+RevenueCat
+
+These services do not receive user-entered caffeine intake data.
+
+Data Sharing and Disclosure
+
+The Service Provider does not sell or share user data.
+
+Automatically collected information may be disclosed:
+
+If required by law
+
+To protect the rights, safety, or security of users or others
+
+To trusted service providers operating under confidentiality obligations
+
+Data Retention and Deletion
+
+Caffeine intake data: stored locally and controlled entirely by the user
+
+Analytics and crash data: retained only as long as necessary for app stability and improvement
+
+Users can delete their data at any time by clearing app data or uninstalling the Application.
+
+Children’s Privacy
+
+The Application is not intended for children under the age of 13.
+The Service Provider does not knowingly collect personal data from children.
+
+If you believe a child has used the Application, please contact:
+
+📧 ismailncgroup@gmail.com
+
+Security
+
+The Service Provider uses reasonable technical and organizational measures to protect information processed by the Application.
+
+Changes to This Privacy Policy
+
+This Privacy Policy may be updated from time to time. Any changes will be posted on this page.
+Continued use of the Application constitutes acceptance of the updated Privacy Policy.
+
+Your Consent
+
+By using the Application, you consent to the processing of information as described in this Privacy Policy.
+
+Contact Us
+
+If you have any questions about this Privacy Policy or data practices, please contact:
+
+📧 ismailncgroup@gmail.com

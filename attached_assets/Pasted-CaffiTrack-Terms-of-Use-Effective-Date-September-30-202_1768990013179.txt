@@ -1,0 +1,134 @@
+CaffiTrack Terms of Use
+
+Effective Date: September 30, 2025
+
+These Terms of Use apply to the CaffiTrack mobile application (the “Application”), developed by Ismail (the “Service Provider”) and provided as a Freemium service.
+
+By downloading or using the Application, you agree to be bound by these Terms of Use. If you do not agree to these terms, please do not use the Application.
+
+Use of the Application
+
+The Application is provided to help users track and gain insights into their caffeine intake. The Application is provided “AS IS” and “AS AVAILABLE.”
+
+You agree to use the Application only for lawful purposes and in accordance with these Terms.
+
+Intellectual Property Rights
+
+The Application, including but not limited to its design, features, content, trademarks, and source code, is the exclusive property of the Service Provider.
+
+You may not:
+
+Copy, modify, or distribute the Application or any part of it
+
+Attempt to extract or reverse-engineer the source code
+
+Translate the Application or create derivative works
+
+Use the Service Provider’s trademarks without prior written permission
+
+All intellectual property rights remain with the Service Provider.
+
+App Modifications and Pricing
+
+The Service Provider reserves the right to:
+
+Modify or discontinue the Application or any feature at any time
+
+Introduce paid features or subscriptions
+
+Any charges will be clearly disclosed to you before purchase.
+
+User Data and Device Security
+
+CaffiTrack does not require account creation and does not collect personal information such as names, email addresses, or user IDs.
+
+All caffeine intake data entered by the user is stored locally on the user’s device. It is your responsibility to keep your device secure.
+
+You are strongly advised not to jailbreak or root your device, as this may:
+
+Compromise your device’s security
+
+Expose it to malware or viruses
+
+Cause the Application to malfunction or stop working
+
+Import and Export Features
+
+The Application allows users to import and export their caffeine intake data.
+
+These actions are user-initiated
+
+Data is handled locally on the device
+
+The Service Provider does not receive or store exported or imported data
+
+Third-Party Services
+
+The Application uses third-party services that operate under their own Terms and Conditions, including:
+
+Google Play Services
+
+Google Analytics for Firebase
+
+Firebase Crashlytics
+
+RevenueCat
+
+The Service Provider is not responsible for the terms, policies, or practices of these third-party services.
+
+Internet Access and Data Charges
+
+Some features of the Application require an active internet connection.
+
+The Service Provider is not responsible for:
+
+Application issues caused by lack of internet connectivity
+
+Data charges incurred by your mobile network provider
+
+Roaming charges if you use the Application outside your home country
+
+If you are not the bill payer for your device, you confirm that you have obtained permission from the bill payer.
+
+Limitation of Liability
+
+While the Service Provider strives to keep the Application accurate and reliable, the Application may rely on third-party services or information.
+
+The Service Provider shall not be liable for:
+
+Any direct or indirect loss arising from reliance on the Application
+
+Data loss resulting from device issues or app removal
+
+Any health, medical, or lifestyle decisions made based on the Application
+
+The Application is provided for informational purposes only and does not provide medical advice.
+
+Updates and Termination
+
+The Service Provider may:
+
+Release updates to the Application
+
+Require users to install updates to continue using the Application
+
+Discontinue or terminate the Application at any time without notice
+
+Upon termination:
+
+Your right to use the Application will end
+
+You must stop using and, if necessary, delete the Application
+
+Changes to These Terms
+
+The Service Provider may update these Terms of Use from time to time.
+Any changes will be posted on this page.
+
+Continued use of the Application after changes are posted constitutes acceptance of the updated Terms.
+
+Contact Us
+
+If you have any questions or suggestions regarding these Terms of Use, please contact:
+
+📧 ismailncgroup@gmail.com

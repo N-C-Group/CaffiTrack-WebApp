@@ -1,0 +1,17 @@
+node_modules
+dist
+.DS_Store
+server/public
+vite.config.ts.*
+*.tar.gz
+
+# Environment and secrets - NEVER commit these
+.env
+.env.local
+.env.*.local
+.env.development
+.env.production
+
+# IDE and local state
+.idea/
+.local/

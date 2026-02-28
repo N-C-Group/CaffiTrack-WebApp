@@ -1,0 +1,8 @@
+*.json
+
+# Never commit pasted credentials, tokens, or service accounts
+*service-account*
+*credentials*
+*private*key*
+*ghp_*
+*gho_*

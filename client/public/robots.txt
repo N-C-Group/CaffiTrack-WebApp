@@ -1,0 +1,14 @@
+# robots.txt for CaffiTrack
+# https://caffitrack.com
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://caffitrack.com/sitemap.xml
+
+# Disallow admin area
+Disallow: /admin
+
+# Disallow API endpoints
+Disallow: /api/
