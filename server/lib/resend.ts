@@ -23,10 +23,11 @@ export async function getUncachableResendClient() {
 export async function sendContactEmail(name: string, email: string, message: string) {
   try {
     const { client, fromEmail } = await getUncachableResendClient();
+    const toEmail = process.env.RESEND_CONTACT_TO || fromEmail;
 
     await client.emails.send({
       from: fromEmail,
-      to: fromEmail,
+      to: toEmail,
       subject: `New CaffiTrack Contact: ${name}`,
       html: `
         <h2>New Contact Message</h2>
