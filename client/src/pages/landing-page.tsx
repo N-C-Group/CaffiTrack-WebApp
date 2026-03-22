@@ -23,6 +23,8 @@ import reminderNotif from "@assets/8_1769221308434.png";
 import dbScreenshot from "@assets/4_1769249402616.png";
 import appleHealthLogo from "@assets/apple-health-logo.png";
 import healthConnectLogo from "@assets/health-connect-logo.png";
+import healthDataScreenshot from "@assets/health-data-screenshot.png";
+import healthConnectScreenshot from "@assets/health-connect-screenshot.png";
 
 export default function LandingPage() {
   const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
@@ -480,8 +482,8 @@ export default function LandingPage() {
               >
                 <div className="absolute inset-0 bg-primary/10 blur-3xl rounded-full" />
                 <img
-                  src={analyticsScreenshot}
-                  alt="Placeholder screenshot for sleep and heart rate trends from HealthKit and Health Connect"
+                  src={healthConnectScreenshot}
+                  alt="Connect to Apple Health or Google Health Connect to sync sleep, heart rate, and blood pressure data"
                   loading="lazy"
                   className="relative z-10 rounded-2xl border border-white/10 shadow-2xl"
                 />
@@ -491,13 +493,13 @@ export default function LandingPage() {
                 initial={{ opacity: 0, x: 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                className="relative flex flex-col gap-4 pt-8 lg:pt-16"
+                className="relative flex flex-col gap-4"
               >
                 <div className="absolute inset-0 bg-primary/10 blur-3xl rounded-full" />
                 <div className="relative z-10 overflow-hidden rounded-2xl border border-white/10 shadow-2xl bg-black/40">
                   <img
-                    src={appScreenshot2}
-                    alt="Placeholder screenshot for blood pressure monitoring in CaffiTrack"
+                    src={healthDataScreenshot}
+                    alt="CaffiTrack home screen showing sleep duration, heart rate, and blood pressure from HealthKit and Health Connect"
                     loading="lazy"
                     className="w-full h-auto"
                   />
