@@ -83,6 +83,66 @@ export default function PrivacyPolicy() {
             </section>
 
             <section>
+              <h2 className="text-2xl font-semibold mb-4 text-white">Health Data (Health Connect Integration)</h2>
+              <p>
+                The Application integrates with Health Connect (Android) and Apple Health (iOS) to read the following health data:
+              </p>
+              <ul className="list-disc pl-6 mt-4 space-y-2">
+                <li>Sleep data</li>
+                <li>Heart rate data</li>
+                <li>Blood pressure data</li>
+              </ul>
+              <p className="mt-4">
+                This data is used to help users understand how their caffeine intake may affect their health metrics.
+              </p>
+              <p className="mt-4 font-medium text-primary/90">How we handle Health Connect data:</p>
+              <ul className="list-disc pl-6 mt-4 space-y-2 text-primary/90 font-medium">
+                <li>Health data is read from Health Connect and displayed within the Application</li>
+                <li>Health data is processed locally on the user's device</li>
+                <li>Health data is not transmitted to external servers</li>
+                <li>Health data is not stored permanently by the Application</li>
+                <li>Health data is not shared with third parties</li>
+                <li>Users can disconnect Health Connect access at any time through device settings</li>
+              </ul>
+              <p className="mt-4">
+                The Application only requests read access to the data types listed above and does not write data to Health Connect.
+              </p>
+            </section>
+
+            <section id="data-deletion" className="scroll-mt-24">
+              <h2 className="text-2xl font-semibold mb-4 text-white">How to Delete Your Data</h2>
+              <p>
+                All CaffiTrack data is stored locally on your device. To delete your data:
+              </p>
+              <div className="mt-4 space-y-4">
+                <div>
+                  <p className="font-medium text-white">1. Delete caffeine intake data:</p>
+                  <ul className="list-disc pl-6 mt-2 space-y-1">
+                    <li>In-app: Go to CaffiTrack Settings → Clear Data</li>
+                    <li>Android: Settings → Apps → CaffiTrack → Clear Data</li>
+                    <li>iOS: Settings → General → iPhone Storage → CaffiTrack → Delete App</li>
+                  </ul>
+                </div>
+                <div>
+                  <p className="font-medium text-white">2. Remove Health access:</p>
+                  <ul className="list-disc pl-6 mt-2 space-y-1">
+                    <li>Android: Settings → Health Connect → CaffiTrack → Remove all permissions</li>
+                    <li>iOS: Settings → Health → Data Access & Devices → CaffiTrack → Turn Off All</li>
+                  </ul>
+                </div>
+                <div>
+                  <p className="font-medium text-white">3. Complete removal:</p>
+                  <ul className="list-disc pl-6 mt-2 space-y-1">
+                    <li>Uninstall the app</li>
+                  </ul>
+                </div>
+              </div>
+              <p className="mt-4 text-primary/90 font-medium">
+                No data is stored on our servers, so clearing app data or uninstalling completely removes all your information.
+              </p>
+            </section>
+
+            <section>
               <h2 className="text-2xl font-semibold mb-4 text-white">Third-Party Services</h2>
               <p>
                 The Application uses third-party services to support analytics, crash reporting, and in-app purchases. These services may collect limited technical data under their own Privacy Policies:

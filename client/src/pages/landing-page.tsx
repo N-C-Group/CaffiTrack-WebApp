@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Zap, Database, ArrowRightLeft, Bot, Apple, Play, Download, Smartphone, ShieldCheck, Activity, Mail, Send } from "lucide-react";
+import { Zap, Database, ArrowRightLeft, ShieldCheck, Activity, Mail, Send, MoonStar, HeartPulse, Gauge } from "lucide-react";
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -21,6 +21,8 @@ import analyticsScreenshot from "@assets/3_1769249370228.png";
 import reminderTime from "@assets/7_1769221308434.png";
 import reminderNotif from "@assets/8_1769221308434.png";
 import dbScreenshot from "@assets/4_1769249402616.png";
+import appleHealthLogo from "@assets/apple-health-logo.png";
+import healthConnectLogo from "@assets/health-connect-logo.png";
 
 export default function LandingPage() {
   const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
@@ -64,6 +66,13 @@ export default function LandingPage() {
               className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
             >
               AI Assistant
+            </a>
+            <a
+              href="#health"
+              onClick={(e) => scrollToSection(e, "health")}
+              className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
+            >
+              Health Integrations
             </a>
             <a 
               href="#contact" 
@@ -402,6 +411,103 @@ export default function LandingPage() {
         </div>
       </section>
 
+      {/* Health Integrations Section */}
+      <section id="health" className="relative z-10 py-24 bg-black/30 backdrop-blur-sm border-y border-white/5">
+        <div className="container mx-auto px-6">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+              className="space-y-6 order-2"
+            >
+              <h2 className="text-4xl md:text-5xl font-bold">
+                HealthKit & Health Connect <br />
+                <span className="text-primary">Wellness Monitoring</span>
+              </h2>
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                Connect CaffiTrack to Apple HealthKit and Google Health Connect to monitor sleep, heart rate, and blood pressure alongside your caffeine intake.
+              </p>
+              <div className="flex flex-wrap items-center gap-3">
+                <div className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/[0.03] px-3 py-1.5">
+                  <img
+                    src={appleHealthLogo}
+                    alt="Apple HealthKit icon"
+                    loading="lazy"
+                    className="h-4 w-4 rounded-sm object-cover object-center"
+                  />
+                  <span className="text-xs font-medium text-muted-foreground">HealthKit (iOS)</span>
+                </div>
+                <div className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/[0.03] px-3 py-1.5">
+                  <img
+                    src={healthConnectLogo}
+                    alt="Google Health Connect icon"
+                    loading="lazy"
+                    className="h-4 w-4 object-contain"
+                  />
+                  <span className="text-xs font-medium text-muted-foreground">Health Connect (Android)</span>
+                </div>
+              </div>
+              <div className="space-y-4 pt-2">
+                <div className="flex items-center gap-3">
+                  <div className="h-8 w-8 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+                    <MoonStar className="h-4 w-4" />
+                  </div>
+                  <span className="text-muted-foreground">Track sleep duration and quality trends</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <div className="h-8 w-8 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+                    <HeartPulse className="h-4 w-4" />
+                  </div>
+                  <span className="text-muted-foreground">Correlate heart rate patterns with caffeine intake</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <div className="h-8 w-8 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+                    <Gauge className="h-4 w-4" />
+                  </div>
+                  <span className="text-muted-foreground">View blood pressure signals in one place</span>
+                </div>
+              </div>
+            </motion.div>
+
+            <div className="grid grid-cols-2 gap-6 items-center order-1">
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                className="relative"
+              >
+                <div className="absolute inset-0 bg-primary/10 blur-3xl rounded-full" />
+                <img
+                  src={analyticsScreenshot}
+                  alt="Placeholder screenshot for sleep and heart rate trends from HealthKit and Health Connect"
+                  loading="lazy"
+                  className="relative z-10 rounded-2xl border border-white/10 shadow-2xl"
+                />
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, x: 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                className="relative flex flex-col gap-4 pt-8 lg:pt-16"
+              >
+                <div className="absolute inset-0 bg-primary/10 blur-3xl rounded-full" />
+                <div className="relative z-10 overflow-hidden rounded-2xl border border-white/10 shadow-2xl bg-black/40">
+                  <img
+                    src={appScreenshot2}
+                    alt="Placeholder screenshot for blood pressure monitoring in CaffiTrack"
+                    loading="lazy"
+                    className="w-full h-auto"
+                  />
+                </div>
+              </motion.div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Contact Section */}
       <section id="contact" className="relative z-10 py-24 container mx-auto px-6">
         <div className="max-w-4xl mx-auto">
@@ -446,6 +552,7 @@ export default function LandingPage() {
               <div className="space-y-2">
                 <a href="#features" onClick={(e) => scrollToSection(e, "features")} className="block text-sm text-muted-foreground hover:text-white transition-colors">Caffeine Database</a>
                 <a href="#ai" onClick={(e) => scrollToSection(e, "ai")} className="block text-sm text-muted-foreground hover:text-white transition-colors">AI Assistant</a>
+                <a href="#health" onClick={(e) => scrollToSection(e, "health")} className="block text-sm text-muted-foreground hover:text-white transition-colors">Health Integrations</a>
                 <a href="#reminders" onClick={(e) => scrollToSection(e, "reminders")} className="block text-sm text-muted-foreground hover:text-white transition-colors">Smart Reminders</a>
               </div>
             </div>
