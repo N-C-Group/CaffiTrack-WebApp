@@ -7,7 +7,6 @@ import LandingPage from "@/pages/landing-page";
 import PrivacyPolicy from "@/pages/privacy";
 import TermsOfService from "@/pages/terms";
 import RequestPage from "@/pages/request";
-import AdminPage from "@/pages/admin";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -17,7 +16,6 @@ function Router() {
       <Route path="/privacy" component={PrivacyPolicy} />
       <Route path="/terms" component={TermsOfService} />
       <Route path="/request" component={RequestPage} />
-      <Route path="/admin" component={AdminPage} />
       <Route component={NotFound} />
     </Switch>
   );

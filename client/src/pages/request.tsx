@@ -17,7 +17,7 @@ import { useState } from "react";
 export default function RequestPage() {
   const { toast } = useToast();
   const [submitted, setSubmitted] = useState(false);
-  
+
   const form = useForm<InsertFeatureRequest>({
     resolver: zodResolver(insertFeatureRequestSchema),
     defaultValues: {
@@ -30,7 +30,10 @@ export default function RequestPage() {
 
   const mutation = useMutation({
     mutationFn: async (data: InsertFeatureRequest) => {
-      await apiRequest("POST", "/api/requests", data);
+      await apiRequest("POST", "/api/requests", {
+        ...data,
+        submitterEmail: data.submitterEmail?.trim() || undefined,
+      });
     },
     onSuccess: () => {
       setSubmitted(true);
@@ -61,7 +64,7 @@ export default function RequestPage() {
           </div>
           <h1 className="text-3xl font-bold">Thank You!</h1>
           <p className="text-muted-foreground max-w-md">
-            Your request has been submitted successfully. We'll review it and add it to the database if approved.
+            Your request has been submitted successfully. We'll review it and may add it to the app if it fits CaffiTrack.
           </p>
           <div className="pt-4">
             <Button variant="outline" onClick={() => setSubmitted(false)} data-testid="button-submit-another">
@@ -87,7 +90,7 @@ export default function RequestPage() {
               Request a <span className="text-primary">New Item</span>
             </h1>
             <p className="text-lg text-muted-foreground">
-              Can't find your favorite drink or coffee chain? Let us know and we'll add it to our database.
+              Can't find your favorite drink or coffee chain? Let us know and we'll consider adding it.
             </p>
           </div>
 
@@ -162,6 +165,9 @@ export default function RequestPage() {
                     className="bg-white/5 border-white/10 focus:border-primary"
                     data-testid="input-request-email"
                   />
+                  {form.formState.errors.submitterEmail && (
+                    <p className="text-sm text-red-500">{form.formState.errors.submitterEmail.message}</p>
+                  )}
                 </div>
 
                 <Button

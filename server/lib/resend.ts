@@ -42,41 +42,42 @@ export async function sendContactEmail(name: string, email: string, message: str
   }
 }
 
-export async function sendRequestStatusEmail(
-  userEmail: string,
-  requestName: string,
-  requestType: string,
-  status: "accepted" | "rejected"
-) {
+function escapeHtml(text: string): string {
+  return text
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;");
+}
+
+export async function sendFeatureRequestEmail(data: {
+  type: "drink" | "chain";
+  name: string;
+  details?: string;
+  submitterEmail?: string;
+}) {
   try {
     const { client, fromEmail } = await getUncachableResendClient();
-
-    const statusText = status === "accepted" ? "Accepted" : "Rejected";
-    const statusColor = status === "accepted" ? "#22c55e" : "#ef4444";
-    const typeText = requestType === "drink" ? "drink" : "coffee chain";
-
-    const message = status === "accepted"
-      ? `Great news! Your request to add "${requestName}" as a ${typeText} has been approved and will be added to CaffiTrack soon.`
-      : `Thank you for your suggestion. Unfortunately, we're unable to add "${requestName}" to CaffiTrack at this time.`;
+    const toEmail = process.env.RESEND_CONTACT_TO || fromEmail;
+    const typeLabel = data.type === "drink" ? "Drink" : "Coffee chain";
+    const detailsText = data.details?.trim()
+      ? escapeHtml(data.details)
+      : "(none)";
 
     await client.emails.send({
       from: fromEmail,
-      to: userEmail,
-      subject: `CaffiTrack Request ${statusText}: ${requestName}`,
+      to: toEmail,
+      subject: `CaffiTrack feature request: ${typeLabel} — ${data.name}`,
       html: `
-        <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;">
-          <h1 style="color: #1a1a2e; margin-bottom: 20px;">CaffiTrack</h1>
-          <div style="background: #f8f9fa; border-radius: 12px; padding: 24px; margin-bottom: 20px;">
-            <p style="font-size: 16px; color: #333; margin: 0 0 16px 0;">${message}</p>
-            <div style="display: inline-block; background: ${statusColor}20; color: ${statusColor}; padding: 8px 16px; border-radius: 8px; font-weight: 600;">
-              ${statusText}
-            </div>
-          </div>
-          <p style="color: #666; font-size: 14px;">Thank you for helping make CaffiTrack better!</p>
-        </div>
-      `
+        <h2>New feature request</h2>
+        <p><strong>Type:</strong> ${typeLabel}</p>
+        <p><strong>Name:</strong> ${escapeHtml(data.name)}</p>
+        <p><strong>Details:</strong></p>
+        <p>${detailsText}</p>
+        <p><strong>Submitter email:</strong> ${data.submitterEmail?.trim() ? escapeHtml(data.submitterEmail.trim()) : "(not provided)"}</p>
+      `,
     });
   } catch (error) {
-    console.error('Failed to send request status email:', error);
+    console.error("Failed to send feature request email:", error);
   }
 }
